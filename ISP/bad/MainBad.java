@@ -5,5 +5,4 @@ public class MainBad {
         driver.acceptRide();
         rider.drive();
     }
-
 }
