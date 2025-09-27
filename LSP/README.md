@@ -26,13 +26,15 @@ vip.calculateCost();           // throws UnsupportedOperationException for some 
 
 * We fix the design by separating classes that cannot fully honor the base contract:
 
+## ✅ Good Example
+
 * ShippingService → interface or base class for all full-featured shipping types.
 
 * StandardShipping → supports all destinations.
 
 * ExpressShipping → supports all destinations, faster delivery.
 
-* VIPFreeShipping → separate class, only handles domestic free shipping.
+* VIPFreeShipping → return 0 since free instead of throwing an exception, only handles domestic free shipping.
 
 ```java
 ShippingService standard = new StandardShipping();
